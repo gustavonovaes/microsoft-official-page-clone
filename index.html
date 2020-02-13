@@ -16,9 +16,9 @@
 </head>
 
 <body>
-  <div class="menu-btn">
+  <a class="menu-btn">
     <i class="fas fa-bars"></i>
-  </div>
+  </a>
   <div class="container">
     <!-- Nav-->
     <nav class="nav">
@@ -258,11 +258,32 @@
       </ul>
     </div>
   </footer>
-  
+
   <script>
+    const mainMenu = document.querySelector('.main-menu');
+
+    // Show menu on click at button
     document.querySelector('.menu-btn').addEventListener('click', function () {
-      document.querySelector('.main-menu').classList.toggle('show');
+      mainMenu.classList.toggle('show');
     });
+
+    // Closes menu if click outside of the menu
+    document.addEventListener('click', function (e) {
+      // Stop if is now showing
+      if (!mainMenu.classList.contains('show')) {
+        return;
+      }
+
+      // Stop if the target is menu button
+      if (e.target.classList.contains('menu-btn')) {
+        return;
+      }
+
+      // If target isn't inside the menu
+      if (!e.target.closest('.nav')) {
+        return mainMenu.classList.remove('show');
+      }
+    }, { capture: true })
   </script>
 </body>
 
