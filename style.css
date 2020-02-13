@@ -377,11 +377,11 @@ a {
 
   .nav .main-menu {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
+    bottom: 0;
 
-    height: 100%;
     width: 50vw;
 
     padding: var(--gap);
