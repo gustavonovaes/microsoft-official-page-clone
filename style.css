@@ -358,12 +358,17 @@ a {
 .footer .content > div {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .footer .content > div i {
   margin-right: var(--gap-half);
 }
 
-.footer > div, .footer li {
+.footer .content ul {
+  justify-content: flex-end;
+}
+
+.footer .content > div, .footer .content li {
   margin-right: var(--gap-half);
 }
 
