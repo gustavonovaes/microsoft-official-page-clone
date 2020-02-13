@@ -151,6 +151,10 @@ a {
   padding: var(--gap-half) var(--gap);
 }
 
+.menu-btn i {
+  pointer-events: none;
+}
+
 .nav {
   display: flex;
   height: 60px;
@@ -381,7 +385,7 @@ a {
     left: 0;
     top: 0;
     bottom: 0;
-
+    
     width: 50vw;
 
     padding: var(--gap);
